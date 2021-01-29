@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -gFam | sed G
+ls -Famg | sed G
