@@ -1,3 +1,3 @@
 #!/bin/bash
-0 search/72 HOLBERTON File containing "HOLBERTON"
+0 search/string HOLBERTON File containing "HOLBERTON"
 !:mime Holberton
