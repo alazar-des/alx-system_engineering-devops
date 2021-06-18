@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This displays holberton school and loop is at 4 display bad luck and
+# when on 8 good luck
+
+MAXCOUNT=10
+count=1
+while [ "$count" -le $MAXCOUNT ]
+do
+	if [ "$count" -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ "$count" -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	(( count += 1 ))
+done
