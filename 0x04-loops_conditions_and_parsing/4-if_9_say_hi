@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This displays holberton school ten times and say hi at 9
+
+MAXCOUNT=10
+count=1
+while [ "$count" -le $MAXCOUNT ]
+do
+	echo "Holberton School"
+	if [ "$count" -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	(( count += 1 ))
+done
