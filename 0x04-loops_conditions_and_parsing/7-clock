@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Print time
+
+MAXHOUR=12
+MAXMIN=59
+count_hour=0
+while [ "$count_hour" -le $MAXHOUR ]
+do
+	echo "Hour: $count_hour"
+	count_min=1
+	while [ "$count_min" -le $MAXMIN ]
+	do
+		echo "$count_min"
+		(( count_min++ ))
+	done
+	(( count_hour++ ))
+done
