@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# display numbers from 1 to 100
+# if the number is multiple of 3 and 5 diplay FizzBuzz instead of number
+# if the numbr is multiple of 3 and not 5 display Fizz
+# and if number is only multiple of 5 and not 3 diplay Buzz
+
+for (( i=1; i<=100; i++ ))
+do
+    (( mul3=i % 3 ))
+    (( mul5=i % 5 ))
+    if [ "$mul3" -eq 0 ] && [ "$mul5" -eq 0 ]
+    then
+	echo "FizzBuzz"
+    elif [ "$mul3" -eq 0 ]
+    then
+	echo "Fizz"
+    elif [ "$mul5" -eq 0 ]
+    then
+	echo "Buzz"
+    else
+	echo "$i"
+    fi
+done
