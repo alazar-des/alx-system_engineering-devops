@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This displays holberton school ten times using while loop
+
+MAXCOUNT=10
+count=1
+while [ "$count" -le $MAXCOUNT ]
+do
+	echo "Holberton School"
+	(( count += 1 ))
+done
