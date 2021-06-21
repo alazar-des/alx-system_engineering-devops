@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # create file and delete when terminating
 
-touch holbertonscript.pid
-echo $$ > holbertonscript.pid
+touch /var/run/holbertonscript.pid
+echo $$ > /var/run/holbertonscript.pid
 
 trap "echo Y U no love me?!" SIGINT
 trap func SIGTERM SIGQUIT
 
 function func()
 {
-    rm holbertonscript.pid
+    rm /var/run/holbertonscript.pid
     echo "I hate the kill command"
     exit
 }
