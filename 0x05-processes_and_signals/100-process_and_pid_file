@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# create file and delete when terminating
+
+touch holbertonscript.pid
+echo $$ > holbertonscript.pid
+
+trap "echo Y U no love me?!" SIGINT
+trap func SIGTERM SIGQUIT
+
+function func()
+{
+    rm holbertonscript.pid
+    echo "I hate the kill command"
+    exit
+}
+
+for (( ; ; ))
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
