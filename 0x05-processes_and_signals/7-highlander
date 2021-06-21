@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Trap SIGTERM signal
+
+trap "echo I am invincible!!!" SIGTERM
+
+for (( ; ; ))
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
