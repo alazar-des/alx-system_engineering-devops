@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Display all processes in user format
 
-ps -e u
+ps -A u
