@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Display all processes in user format
+# shellcheck disable=SC2009
+
+ps afu -C bash
