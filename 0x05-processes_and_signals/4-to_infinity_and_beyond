@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Print To infinity and beyond indefinatly and in between sleep for 2 sec
+
+for (( ; ; ))
+do
+echo "To infinity and beyond"
+sleep 2
+done
