@@ -2,4 +2,4 @@
 # Display all processes in user format
 # shellcheck disable=SC2009
 
-ps afu -C bash
+ps fu -C bash
