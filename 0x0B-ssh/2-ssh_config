@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# configure to conect without password
+
+host=34.73.212.97
+
+# Copy your public key to the remote server
+cat ~/.ssh/id_rsa.pub | ssh $host 'cat >> ~/.ssh/holberton'
+
+# ssh is very strict about correct permissions
+ssh $host 'chmod g-w,o-w ~; chmod 700 ~/.ssh; chmod 600 ~/.ssh/holberton'
