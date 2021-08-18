@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# allow Nginx to connect through port 80
 
 sudo ufw allow 'Nginx HTTP'
 html="
@@ -19,4 +20,4 @@ html="
 </body>
 </html>
 "
-echo "$html" >> /var/www/html/index.html
+echo "$html" >>  /var/www/html/index.nginx-debian.html
