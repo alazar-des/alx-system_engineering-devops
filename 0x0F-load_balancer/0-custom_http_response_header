@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# configure header
+
+location some-location {
+  add_header X-Served-By 294-web-01;
+}
