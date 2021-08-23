@@ -20,4 +20,4 @@ html="
 </body>
 </html>
 "
-echo "$html" >>  /var/www/html/index.nginx-debian.html
+echo "$html" > /var/www/html/index.nginx-debian.html
