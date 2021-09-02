@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # list network port, name and program pid
 
-netstat -p
+netstat -lp
