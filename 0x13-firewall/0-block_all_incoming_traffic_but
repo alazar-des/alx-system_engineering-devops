@@ -1,1 +1,2 @@
+sudo ufw default deny incoming
 sudo ufw 22,443,80
