@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# run whoami under the user passed as an argument
+
+su -c whoami "$1"
