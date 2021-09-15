@@ -7,6 +7,11 @@ import sys
 
 
 if __name__ == "__main__":
+    emp_path = 'https://jsonplaceholder.typicode.com/users/' + sys.argv[1]
+    resp_emp = requests.get(emp_path)
+    resp_empj = resp_emp.json()
+    name = resp_empj.get("name")
+
     resp = requests.get('https://jsonplaceholder.typicode.com/todos')
     resp_json = resp.json()
     empl = []
@@ -17,7 +22,7 @@ if __name__ == "__main__":
     for tasks in empl:
         if tasks.get("completed"):
             comp_tasks.append(tasks.get("title"))
-    print("Employee {} is done with tasks({}/{}):".format(sys.argv[1],
+    print("Employee {} is done with tasks({}/{}):".format(name,
                                                           len(comp_tasks),
                                                           len(empl)))
     for task in comp_tasks:
