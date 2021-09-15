@@ -13,7 +13,14 @@ if __name__ == "__main__":
     empl_json = {}
 
     for emp in resp_json:
-        emp_dic = {"username": emp.get("id"),
+        if str(emp["userId"]) not in empl_json:
+            emp_path = 'https://jsonplaceholder.typicode.com/users/' + str(
+                emp.get("userId"))
+            resp_emp = requests.get(emp_path)
+            resp_empj = resp_emp.json()
+            name = resp_empj.get("username")
+
+        emp_dic = {"username": name,
                    "task": emp.get("title"),
                    "completed": emp.get("completed")}
         if str(emp["userId"]) not in empl_json:
