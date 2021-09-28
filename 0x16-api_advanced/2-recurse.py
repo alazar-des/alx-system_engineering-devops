@@ -7,7 +7,7 @@ import requests
 def append_title(child_list, hot_list=[]):
     """ append list recursively.
     """
-    if len(child_list) == 1:
+    if len(child_list) == 0:
         return hot_list
     else:
         hot_list.append(child_list[0]['data']['title'])
