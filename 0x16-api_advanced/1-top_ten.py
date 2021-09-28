@@ -11,9 +11,9 @@ def top_ten(subreddit):
         "/hot.json?limit=10"
     headers = {'User-Agent': 'Holberton/0.0.1'}
     res = requests.get(endpoint, headers=headers)
-    res_json = res.json()['data']['children']
+    res_json = res.json()
     if res.status_code == 200:
         for i in range(len(res_json)):
-            print(res_json[i]['data']['title'])
+            print(res_json['data']['children'][i]['data']['title'])
     else:
         print(None)
