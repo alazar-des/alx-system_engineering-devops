@@ -13,7 +13,8 @@ def top_ten(subreddit):
     res = requests.get(endpoint, headers=headers)
     res_json = res.json()
     if res.status_code == 200:
-        for i in range(len(res_json)):
-            print(res_json['data']['children'][i]['data']['title'])
+        hottest = res_json['data']['children']
+        for i in range(len(hottest)):
+            print(hottest[i]['data']['title'])
     else:
         print(None)
